@@ -1,0 +1,16 @@
+Vorraussetzungen:
+    1)Python Interpreter - Version 3.9
+    2)requirements.txt installieren
+
+Starten des Knotens:
+    1)Mit Konsole in das Knotenverzeichnis gehen
+    2)Befehl "python -m node *PORT*" eingeben, wobei *PORT* der Port ist auf dem der lokale Server laufen soll.
+    3)Beispiel: python -m node 5000
+
+Zusätzliche Schlüssel erstellen:
+    1)Bei EXTRA\keypair.txt sind bereits erstellte Beispielschlüssel für Universitäten erstellt worden.
+    2)Bei Bedarf kann mit dem Skript EXTRA\gen_keypair.py neue zufällige Schlüssel erstellt werden.
+
+Knotendaten ändern:
+    1)Bei nodedata\node_data.py kann der Private-Key eines Knotens verändert werden. Den zugehörigen Public-Key kennt der Knoten dann selbst.
+    2)Bei nodedata\genesis_data.py kann der Genesis-Block eines Knotens verändert werden.

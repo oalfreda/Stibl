@@ -1,0 +1,43 @@
+.entry-pool {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #d4c996;
+  color: black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.entrydata-pool {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #88596f;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.alligner {
+    text-align: center;
+}
+
+.button {
+  margin: 20px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

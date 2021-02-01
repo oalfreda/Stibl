@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/entry_form.css') }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stibl</title>
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="/home">Home</a>
+      <a href="/blockchain">Blockchain</a>
+      <a href="/pool">Pool</a>
+      <div class="dropdown">
+        <button class="dropbtn-active">Make Entry
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/entry/uni">Uni</a>
+          <a href="/entry/student">Student</a>
+          <a href="/entry/exam">Exam</a>
+          <a href="/entry/subject">Subject</a>
+          <a href="/entry/attempt">Attempt</a>
+          <a href="/entry/cancel">Cancel</a>
+          <a href="/entry/matriculation">Matriculation</a>
+          <a href="/entry/exmatriculation">Exmatriculation</a>
+          <a href="/entry/uni_key">Uni Key</a>
+          <a href="/entry/admin_key" class="active">Admin Key</a>
+          <a href="/entry/revoke_key">Revoke Key</a>
+        </div>
+      </div>
+        <div class="dropdown">
+    <button class="dropbtn">Make Query
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="/query/student_history">Student History</a>
+    </div>
+  </div>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navbar_fun()">&#9776;</a>
+    </div>
+
+    <h1 class="title">ADMIN KEY</h1>
+
+    <div class="div-entry">
+      <form action="/transact_entry" method="post">
+
+        <label for="key">Key</label>
+        <input type="text" id="key" name="key" placeholder="Public Key" required>
+
+        <input type="hidden" name="entry_type" value="admin_key" />
+
+        <input type="submit" value="Broadcast Entry">
+      </form>
+    </div>
+
+
+
+    {% if success=="true" %}
+    <h1 class="minimessages">SUCCESS</h1>
+    {% endif %}
+
+
+    <script type="text/javascript"
+         src="{{ url_for('static', filename='scripts/navbar_util.js') }}"></script>
+
+
+  </body>
+</html>
+
+
+
+
+
